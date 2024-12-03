@@ -1,0 +1,18 @@
+[project]
+name = "package2"
+version = "0.1.0"
+readme = "README.md"
+authors = [
+    { name = "Charlie Marsh", email = "charlie@astral.sh" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "package1",
+]
+
+[tool.uv.sources]
+package1 = { path = "../package1" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
